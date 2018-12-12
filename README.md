@@ -21,3 +21,9 @@ Then, navigate to [localhost:3000](http://localhost:3000)
 
 ## Tests
 Currently there are no tests
+
+## Deployment
+I have no idea how to deploy this app in production
+
+## Configuration
+There is nothing to configure
