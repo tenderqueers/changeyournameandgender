@@ -20,9 +20,11 @@ class App extends Component {
   }
 
   render() {
-    const questions = Array(3).fill(null)
+    const questions = Array(4).fill(null)
     questions[0] = <QuestionCalifornia onClick={(answer) => this.saveAnswer(answer)}/>
     questions[1] = <QuestionName onClick={(answer) => this.saveAnswer(answer)}/>
+    questions[2] = <QuestionHaveCaliforniaBirthCertificate onClick={(answer) => this.saveAnswer(answer)}/>
+    questions[3] = <QuestionNewCaliforniaBirthCertificate onClick={(answer) => this.saveAnswer(answer)}/>
 
     var answers = []
 
@@ -74,6 +76,30 @@ class QuestionName extends Component {
             <Button color="success" onClick={() => this.props.onClick(this.state.name)}>Save</Button>
           </InputGroupAddon>
         </InputGroup>
+      </div>
+    )
+  }
+}
+
+class QuestionHaveCaliforniaBirthCertificate extends Component {
+  render() {
+    return (
+      <div>
+        <h2>Do you have a California Birth Certificate?</h2>
+        <Button color="danger" onClick={() => this.props.onClick(false)}>No</Button>
+        <Button color="success" onClick={() => this.props.onClick(true)}>Yes</Button>
+      </div>
+    )
+  }
+}
+
+class QuestionNewCaliforniaBirthCertificate extends Component {
+  render() {
+    return (
+      <div>
+        <h2>Would you like to request a new Birth Certificate?</h2>
+        <Button color="danger" onClick={() => this.props.onClick(false)}>No</Button>
+        <Button color="success" onClick={() => this.props.onClick(true)}>Yes</Button>
       </div>
     )
   }
