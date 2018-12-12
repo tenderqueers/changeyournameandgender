@@ -2,6 +2,10 @@
 An app to help Californians navigate the paperwork to legally change their name and gender
 ## Getting started
 This app uses [Yarn](https://yarnpkg.com/en/) to manage dependencies.
+This means you may have to install yarn to begin
+```
+$ brew install yarn
+```
 
 After cloning, to install the required components run:
 ```
