@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../styles/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class NotAvailable extends Component {

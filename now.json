@@ -1,0 +1,7 @@
+{
+  "name": "Change Your Name And Gender Dot Cool",
+  "version": 2,
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" }
+  ]
+}
