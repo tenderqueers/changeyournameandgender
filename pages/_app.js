@@ -9,7 +9,7 @@ class MyApp extends App {
     return (
       <Container>
         <Provider store={reduxStore}>
-          <Component {...pageProps} />
+          <Component {...pageProps} currentQuestion={this.props.router.query.question} />
         </Provider>
       </Container>
     )

@@ -4,7 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 class NotAvailable extends Component {
   render() {
-    return (<p>Sorry, Change Your Name And Gender Dot Cool is not available outside of California (for now)</p>)
+    return (
+      <div>
+        <p>Sorry, we currently only operate in California.</p>
+        <p>Check out the <a href="https://transgenderlawcenter.org">Transgender Law Center</a> for help in your state.</p>
+      </div>
+    )
   }
 }
 
