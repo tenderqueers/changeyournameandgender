@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const pdfform = require('pdfform.js');
+const pdfform = require('../lib/pdfform.js');
 
 class Download extends Component {
   static mapStateToProps(state) {
