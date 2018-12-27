@@ -7541,9 +7541,9 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-"pdfform.js@https://github.com/zaksoup/pdfform.js":
+"pdfform.js@https://github.com/zaksoup/pdfform.js/archive/0.1.tar.gz":
   version "1.0.13"
-  resolved "https://github.com/zaksoup/pdfform.js#0a084fc9889a434eb954b4596be8a29006a65cdd"
+  resolved "https://github.com/zaksoup/pdfform.js/archive/0.1.tar.gz#51366432f59dfbdd571003024784367445505094"
   dependencies:
     pako "*"
     text-encoding "*"
