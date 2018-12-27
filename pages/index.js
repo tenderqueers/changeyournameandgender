@@ -2,7 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'reactstrap';
+import Link from 'next/link'
 import { QuestionCalifornia, QuestionName, QuestionHaveCaliforniaBirthCertificate, QuestionNewCaliforniaBirthCertificate } from '../lib/questions';
+
+class GoToDownload extends Component {
+  render() {
+    return (
+      <Link href="/download">
+        <Button>go to download</Button>
+      </Link>
+    )
+  }
+}
 
 class Index extends Component {
   static mapStateToProps(state) {
@@ -17,6 +28,7 @@ class Index extends Component {
     this.questions[1] = <QuestionName />
     this.questions[2] = <QuestionHaveCaliforniaBirthCertificate />
     this.questions[3] = <QuestionNewCaliforniaBirthCertificate />
+    this.questions[4] = <GoToDownload />
 
   }
 
@@ -49,11 +61,6 @@ class Index extends Component {
       </div>
     )
   }
-}
-
-
-var _ = (mapStateToProps, SomeOtherFunc) => component => {
-
 }
 
 export default connect(Index.mapStateToProps)(Index);
