@@ -14,7 +14,14 @@ class Download extends Component {
     const saveAs = require('save-as')
     console.log('something with bif')
     var fields = {
-      name_top: [this.props.answers.name]
+      name_top: [this.props.answers.name],
+      name_bottom: [this.props.answers.name],
+      petition_for: ['Petition for Gender Change'],
+      unlimited: [true],
+      nonmonetary: [true],
+      not_a_class_action_suit: [true],
+      not_complex: [true],
+      other_petition: [true]
     }
 
     var outBuf = pdfform.transform(buf, fields)
