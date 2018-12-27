@@ -4,5 +4,5 @@
   "builds": [
     { "src": "next.config.js", "use": "@now/next" }
   ],
-  "alias": ["cynagdc-dev.tenderqueers.space"]
+  "alias": ["cynagdc-dev.tenderqueers.space", "changeyournameandgender.cool"]
 }
