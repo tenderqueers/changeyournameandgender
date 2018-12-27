@@ -13,8 +13,11 @@ class Download extends Component {
   fillCM010(buf) {
     const saveAs = require('save-as')
     console.log('something with bif')
+    var fields = {
+      name_top: [this.props.answers.name]
+    }
 
-    var outBuf = pdfform.transform(buf, {'name_top': ['test name is really really long it will eventually get super duper cut off by the renderer'], 'street_address': ['some street usa']})
+    var outBuf = pdfform.transform(buf, fields)
     var download = new Blob([outBuf], { type: 'text/pdf' })
     saveAs.saveAs(download, 'test_filled.pdf')
   }
