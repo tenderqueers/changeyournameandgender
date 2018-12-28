@@ -9,7 +9,12 @@ class MyApp extends App {
     return (
       <Container>
         <Provider store={reduxStore}>
-          <Component {...pageProps} currentQuestion={this.props.router.query.question} />
+          <div className="container main">
+            <Component {...pageProps} currentQuestion={this.props.router.query.question} />
+          </div>
+          <style jsx global>{`
+            h1, h2 {text-align:center;}
+          `}</style>
         </Provider>
       </Container>
     )

@@ -16,34 +16,19 @@ class GoToDownload extends Component {
 }
 
 class Index extends Component {
-  static mapStateToProps(state) {
-    return {answers: {...state.answers}}
-  }
-
   constructor(props) {
     super(props)
 
     this.questions = Array(4).fill(null)
-    this.questions[0] = <QuestionCalifornia />
-    this.questions[1] = <QuestionName />
-    this.questions[2] = <QuestionHaveCaliforniaBirthCertificate />
-    this.questions[3] = <QuestionNewCaliforniaBirthCertificate />
-    this.questions[4] = <GoToDownload />
+    this.questions[0] = <QuestionCalifornia key="california"/>
+    this.questions[1] = <QuestionName key="name"/>
+    this.questions[2] = <QuestionHaveCaliforniaBirthCertificate key="birthCert"/>
+    this.questions[3] = <QuestionNewCaliforniaBirthCertificate key="newBirthCert"/>
+    this.questions[4] = <GoToDownload key="download"/>
 
-  }
-
-  getInitialProps(props) {
-    console.log(props)
-    return {}
   }
 
   render() {
-    var answers = []
-
-    for (var answer in this.props.answers) {
-      answers.push(<li>{answer}: {this.props.answers[answer].toString()}</li>)
-    }
-
     var question = this.props.currentQuestion;
 
     if (question === undefined) {
@@ -54,13 +39,10 @@ class Index extends Component {
       <div>
         <div>
           {this.questions[question]}
-          <ul>
-            {answers}
-          </ul>
         </div>
       </div>
     )
   }
 }
 
-export default connect(Index.mapStateToProps)(Index);
+export default Index;

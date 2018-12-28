@@ -46,9 +46,6 @@ class Download extends Component {
     };
 
     xhr.send();
-
-    // var blob = new Blob([filled_pdf], {type: 'application/pdf'});
-		// saveAs(blob, 'pdfform.js_generated.pdf');
   }
 
   render() {
