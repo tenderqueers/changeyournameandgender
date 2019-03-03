@@ -14,19 +14,27 @@ class Download extends Component {
     const saveAs = require('save-as')
     console.log('something with bif')
     var fields = {
+      // request_new_birth_certificate: [true]
       name_top: [this.props.answers.name],
-      name_bottom: [this.props.answers.name],
-      petition_for: ['Petition for Gender Change'],
+      street_address: [""],
+      city_state_zip: [""],
+      phone_number: [""],
+      court_county: [""],
+      court_street_address: [""],
+      court_mailing_address: [""],
+      court_city_and_zip: [""],
+      court_branch_name: [""],
       unlimited: [true],
-      nonmonetary: [true],
       not_a_class_action_suit: [true],
       not_complex: [true],
-      other_petition: [true]
+      other_petition: [true],
+      petition_for: ["Petition for Gender Change"],
+      name_bottom: [this.props.answers.name],
     }
 
     var outBuf = pdfform.transform(buf, fields)
     var download = new Blob([outBuf], { type: 'text/pdf' })
-    saveAs.saveAs(download, 'test_filled.pdf')
+    saveAs.saveAs(download, 'CM-010.pdf')
   }
 
   downloadCM010() {
